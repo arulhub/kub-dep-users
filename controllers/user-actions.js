@@ -94,6 +94,7 @@ const createUser = async (req, res, next) => {
   try {
     savedUser = await newUser.save();
   } catch (err) {
+    console.log('Error = ', err);
     const error = createError(err.message || 'Failed to create user.', 500);
     return next(error);
   }
