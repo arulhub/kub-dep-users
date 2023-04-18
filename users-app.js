@@ -37,6 +37,7 @@ mongoose.connect(
     if (err) {
       console.log('COULD NOT CONNECT TO MONGODB!');
     } else {
+      console.log('Connected to MongoDB!');
       app.listen(3000);
     }
   }
