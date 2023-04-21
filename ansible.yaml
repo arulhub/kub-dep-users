@@ -1,0 +1,11 @@
+---
+- name: Deploy to K8s Cluster
+  hosts: webservers   
+  tasks:
+    - name: clone repository
+      git: >
+        repo=https://github.com/arulhub/kub-dep-users.git          
+        dest=/opt/kub-demo/kub-dep-users
+    - name: Deploy Users API
+      shell: |
+        kubectl apply -f=/opt/kub-demo/kub-dep-users/users.yaml
