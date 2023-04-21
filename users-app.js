@@ -23,7 +23,7 @@ app.use((err, req, res, next) => {
   if (err.code) {
     code = err.code;
   }
-
+  console.log('test');
   if (err.message) {
     message = err.message;
   }
